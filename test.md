@@ -29,4 +29,10 @@ This is a test of *pandoc*.
 - list two
 
 #Test3
-Something
+\dot(imagename)(Some Text Here)
+~~~
+digraph {
+    A -> B -> C;
+    A -> C;
+}
+~~~
