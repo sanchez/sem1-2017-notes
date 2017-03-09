@@ -479,7 +479,22 @@ According to the ISO standard
             - Non-functional Requirements should be measurable
 
 ## The Requirements Engineering Process
-<!-- TODO: Add diagram -->
+See Figure \ref{fig:REQEngg}
+
+\dot(REQEngg)(The Requirements Engineering Process\label{fig:REQEngg})
+~~~
+digraph {
+    a [label="Requirements Elicitation and Analysis"];
+    b [label="Requirements Specification"];
+    c [label="Requirements Validation"];
+    d [label="Requirements Management"];
+
+    a -> b -> c -> d;
+    c -> b;
+    c -> a;
+}
+~~~
+
 ## Who does it?
 ### User organization (Domain competent)
 Universities prepare requirements specifications for student enrolment systems (Si-net)
