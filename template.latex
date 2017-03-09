@@ -22,16 +22,18 @@
 \newcommand{\black}[0]{\color{black}}
 
 % set the title format
-\usepackage{titlesec}
+\usepackage[explicit]{titlesec}
+% \usepackage{xhfill}
 \newcommand{\vrulefill}[1]{\leavevmode\leaders\hrule height#1\hfill\kern0pt}
 \newcommand{\firstletter}[1]{\primary#1\black}
-\titleformat{\section}[runin]{\bfseries\primary\Large}{\thesection.}{0.75em}{}[\quad\vrulefill{0.12em}\newline]
-\titlespacing*{\section}{0em}{0em}{0em}
-\titleformat{\subsection}[hang]{\bfseries\primary\large}{\thesubsection.}{0em}{}
+\newcommand{\ruleafter}[1]{#1~\xrfill[.7ex]{1pt}}
+\titleformat{\section}{\bfseries\primary\Large}{\thesection.}{0.75em}{#1\quad\vrulefill{0.12em}}
+\titlespacing*{\section}{0em}{3em}{0em}
+\titleformat{\subsection}{\bfseries\primary\large}{}{0em}{#1}
 \titlespacing*{\subsection}{0em}{0em}{0em}
 \def\myfirstletter#1{\primary#1\black}
 \DeclareRobustCommand{\FirstPrimaryLetter}[1]{\myfirstletter #1}
-\titleformat{\subsubsection}[hang]{\bfseries\large}{}{0em}{\quad\FirstPrimaryLetter}
+\titleformat{\subsubsection}[hang]{\bfseries\large}{\thesubsubsection.}{0em}{\quad\FirstPrimaryLetter#1}
 \titlespacing*{\subsubsection}{0em}{0em}{0em}
 \setcounter{secnumdepth}{2}
 \renewcommand\contentsname{Table of Contents}
