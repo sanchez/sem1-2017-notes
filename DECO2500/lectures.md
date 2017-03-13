@@ -33,16 +33,16 @@ One set of usability principles (Norman 1998)
 
 Another set of usability principles (Nielsen 2001)
 
-- Visibility of system status -- *Externalising cognition - Gulf of Evaluation*
-- Match between system and real world -- *Mental Model - Gulf of Execution*
-- User control and freedom -- *Goal-directed activity - Gulf of Evaluation*
-- Consistency and standards -- *Learning and memory - Gulf of Execution*
-- Error prevention -- *Focusing attention - Gulf of Execution*
-- Recognition rather than recall -- *Learning and memory - Gulf of Execution*
-- Flexibility and efficiency of use -- *Information processing*
-- Aesthetic and minimalist design -- *see Emotional Design*
-- Help users recognize, diagnose and recover from errors -- *Goal-directed activity (7-stages)*
-- Help and documentation
+- **Visibility of system status** -- *Externalising cognition - Gulf of Evaluation*
+- **Match between system and real world** -- *Mental Model - Gulf of Execution*
+- **User control and freedom** -- *Goal-directed activity - Gulf of Evaluation*
+- **Consistency and standards** -- *Learning and memory - Gulf of Execution*
+- **Error prevention** -- *Focusing attention - Gulf of Execution*
+- **Recognition rather than recall** -- *Learning and memory - Gulf of Execution*
+- **Flexibility and efficiency of use** -- *Information processing*
+- **Aesthetic and minimalist design** -- *see Emotional Design*
+- **Help users recognize, diagnose and recover from errors** -- *Goal-directed activity (7-stages)*
+- **Help and documentation**
 
 ## Interaction Design (ID)
 Designing interactive products to support the way people communicate and interact in their everyday and working lives
@@ -149,7 +149,7 @@ Three considerations when developing a conceptual model
 1) Interface metaphor -- exploiting user experience
 
     How is the user's prior knowledge used?
-    
+
     Helps user know what to do and how to interpet feedback
 
 - Not same as "user interface"
