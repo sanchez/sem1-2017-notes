@@ -7,6 +7,8 @@
 \usepackage{etoolbox}
 \usepackage{hyperref}
 \usepackage[none]{hyphenat}
+\usepackage{amssymb}
+\usepackage{amsmath}
 
 \usepackage{xcolor}
 \definecolor{white}{HTML}{FFFFFF}
