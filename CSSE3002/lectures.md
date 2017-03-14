@@ -329,26 +329,27 @@ digraph {
 - Generate "buy-in"
 - Usually produced by sponsor
 
+## Vision Statement
+- Long term purpose of system (a bit idealistic)
+- For -- target audience
+- Who -- statement of need
+- The -- product
+- Is -- category
+- That -- reason to use
+- Unlike -- alternative
+- Our product -- advantage
+
 ## Goals
 - High-level
 - What project will accomplish
-- One
-    - sometimes more
+- One sentence (sometimes more)
 
 ## Objectives
 - Specific
-- Supports a goal
-    - think "how" it does this
+- Supports a goal (think "how" it does this)
 - Describe with an action verb
     - measurable
     - address project end result
-
-### Goals & Objects Example
-- Data mining of insurance claims
-- Goal
-    - Increase identification of fraudulent insurance claims by 20%
-- Objective
-    - Identify common characteristics of false theft claims
 
 ## SMART
 ### Specific
@@ -366,6 +367,44 @@ digraph {
 
 ### Time-based
 - realistic deadline
+
+## Business Benefits
+- High-level but concrete
+    - Increased revenue
+    - Reduced costs
+    - Improved efficiency
+    - Improved customer satisfaction
+    - ...
+
+## Scope
+**Focuses on what needs and doesn't need to be done. What hasn't been figured out yet. Project wide**
+
+- What is to be delivered
+    - by end of project
+    - releases determined later
+- What is explicitly out of scope
+    - does not relate to business benefit
+
+## Stakeholders
+**Who is interested in this project**
+- Sponsor (The main person in the company who has the vision for where they want this project to go)
+- Influencers (Have good insights into the way this project should head)
+- Users
+    - key (People who use this the most or get the biggest benefit)
+    - restricted (Will use the system but their use of system will be restricted)
+    - super (Administrator or power user, get special permissions)
+- Anti-Users (Who should not use the system, prevent them from accessing)
+- Other
+
+## Assumptions
+- Expected to occur
+    - Air Traffic Controller's workstations will be updated before system is rolled out
+
+## Constraints
+- Restrictions
+    - project
+    - development team
+- *Must run on existing web server infrastructure*
 
 # What is Requirements Engineering?
 - Requirements engineering is a term often used for a systematic approach to acquire, analyse, validate, document and manage requirements
@@ -514,3 +553,73 @@ e.g. other devices or systems in the environment
 
 ## Other Stakeholders
 e.g. marketing experts, regulators, managers, business owners, developers
+
+# Business Value Not System Requirements
+## Understanding the Business
+- Developers and Stakeholders need a shared understanding of the project's purpose
+    - easier when they collaborate continuously
+- Focus on value to be delivered
+    - not just the requirements
+- Enables better decisions, designs and suggestions
+    - developers are part of the value chain
+        - not just serving it
+
+# Business Model
+A business model describes the rationale of how an organisation creates, delivers, and captures value
+
+## Canvas
+<!-- TODO: Put in the canvas image -->
+
+### Customers
+- Personas
+- Who's Impacted
+- Stakeholders
+
+### Value Proposition
+- Use Cases
+- Specification by Example
+- Customer Savings / Revenue
+- Improvements
+- Experience Improvements
+
+### Channels
+- Systems
+- Methods
+- Related Features
+
+### Relationship
+- Direct / Indirect
+- Human / Automated
+- Assisted / Self Service
+- Individually / Collaboratively
+
+### Revenue Streams
+- Opportunity
+- Savings
+- Profit
+- Improvements
+
+### Key Resources
+- Systems
+    - Primary
+    - Secondary / Connected
+- Team
+    - Development
+    - Business
+
+### Key Activites
+- Use Cases
+- Who's Activities
+- Connected Activities
+
+### Key Partnerships
+- Development Team
+- Business
+- Secondary / Connected Teams
+- Impacted Teams
+- Related Teams
+
+### Cost Structure
+- Opportunity
+- Development Estimates
+- Quantity of Customers
