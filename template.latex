@@ -9,6 +9,8 @@
 \usepackage[none]{hyphenat}
 \usepackage{amssymb}
 \usepackage{amsmath}
+\usepackage{longtable}
+\usepackage{booktabs}
 
 \usepackage{xcolor}
 \definecolor{white}{HTML}{FFFFFF}
