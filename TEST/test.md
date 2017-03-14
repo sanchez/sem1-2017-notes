@@ -36,3 +36,21 @@ digraph {
     A -> C;
 }
 ~~~
+
+Term 1
+: Definition with lazy
+continuation
+
+Term2
+: Definition 2
+
+Term 3
+    ~ Something else here
+
++---------------+---------------+--------------------+
+| Right         | Left          | Centered           |
++==============:+:==============+:==================:+
+| Bananas       | $1.34         | built-in wrapper   |
++---------------+---------------+--------------------+
+
+Table: Some Text Can Be Entered Here
