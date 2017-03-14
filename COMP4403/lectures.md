@@ -108,8 +108,8 @@ The language $\mathcal{L}(G)$ corresponding to a grammar, G, is the set of all f
 A sequence of terminal symbols $s$ such that $S\Rightarrow^* s$ is called a sentence in the language
 
 ### Definition (sentential form)
-A sequence of terminals and nonterminals $\alpha$ such that $S\Rightarrow^* \alpha$ is called a *sentential form* of the language\newline
-
+A sequence of terminals and nonterminals $\alpha$ such that $S\Rightarrow^* \alpha$ is called a *sentential form* of the language\
+\
 Hence all sentences are also sentential forms.
 
 ## Parse trees
@@ -248,8 +248,8 @@ graph {
 A grammar is ambiguous for a sequence, s, if there is more than one parse tree for s
 
 ### Definition (Ambiguous grammar)
-A grammar is ambiguous if it is ambiguous for any sequence\newline
-
+A grammar is ambiguous if it is ambiguous for any sequence\
+\
 The following is an ambiguous grammar for expressions with the binary operator "-", in which $N$ represents a number. $$E\rightarrow E "-" E$$ $$E\rightarrow N$$
 For example, a string like "1-2-3" has two different parse trees
 
@@ -257,8 +257,8 @@ For example, a string like "1-2-3" has two different parse trees
 To remove ambiguity and treat "-" as a left associative operator (as usual) we can rewrite the grammar to $$E\rightarrow E "-" T$$ $$E\rightarrow T$$ $$T\rightarrow N$$ and to treat "-" as right associative (not the usual interpretation) we use $$E\rightarrow T "-" E$$ $$E\rightarrow T$$ $$T\rightarrow N$$
 
 ## Operator Precedence
-With a grammar like $$E\rightarrow E "+" E \mid E "\*" E \mid F$$ the precedence of the operators is not specified, so that a string like "1+2\*3" is ambiguous; it can be interpreted as either "1+(2\*3)" or "(1+2)\*3", where the brackets just show grouping. To ensure that "+" has lower precedence than "\*" and remove the ambiguity, we can rewrite the grammar as $$E\rightarrow E "+" T \mid T$$ $$T\rightarrow T "\*" F \mid F$$ which also treats both "+" and "\*" as left associative.\newline
-
+With a grammar like $$E\rightarrow E "+" E \mid E "\*" E \mid F$$ the precedence of the operators is not specified, so that a string like "1+2\*3" is ambiguous; it can be interpreted as either "1+(2\*3)" or "(1+2)\*3", where the brackets just show grouping. To ensure that "+" has lower precedence than "\*" and remove the ambiguity, we can rewrite the grammar as $$E\rightarrow E "+" T \mid T$$ $$T\rightarrow T "\*" F \mid F$$ which also treats both "+" and "\*" as left associative.\
+\
 The following is an ambiguous grammar for lists with elements corresponding to the nonterminal $X$. $$L\rightarrow \epsilon\mid X\mid LL$$
 For example, a sentential form corresponding to a single $X$ can be derived via the following three derivation sequences (as well as many others) $$L\Rightarrow X$$ $$L\Rightarrow LL\Rightarrow L\epsilon = L\Rightarrow X$$ $$L\Rightarrow LL\Rightarrow LLL\Rightarrow LL\epsilon = LL\Rightarrow\epsilon L = L\Rightarrow X$$ which generate different parse trees
 
