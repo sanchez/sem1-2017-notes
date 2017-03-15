@@ -13,7 +13,7 @@ tblPrefix: "Table "
 secPrefix: "Section "
 ---
 
-#Phases of a Compiler
+# Phases of a Compiler
 \dot(Phases)(Phases of a Compiler\label{fig:Phases})
 ~~~
 digraph {
