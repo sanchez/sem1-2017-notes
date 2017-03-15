@@ -7,6 +7,10 @@ course: The Software Process
 title: Lecture 1
 toc: toc
 headrule: 0.12em
+figPrefix: "Figure "
+eqnPrefix: "Equation "
+tblPrefix: "Table "
+secPrefix: "Section "
 ---
 
 # What is interaction design?
@@ -21,7 +25,7 @@ headrule: 0.12em
 ## Human-computer interaction (HCI)
 Concerned with the design, evaluation, and implementation of interactive computing systems for human use and with the study of majo phenomena surrounding them
 
-### What is HCI?
+### What is HCI? {#sec:UsePrinc}
 One set of usability principles (Norman 1998)
 
 - **Visibility** -- can you see your options for action? *Externalising cognition -- Gulf of Execution*
@@ -398,3 +402,47 @@ Interaction design is **multidisciplinary**.
 Specifying usability and user experience **goals** helps design of good products.
 
 **Design principles** are useful heuristics for analyzing and evaluating an interactive product.
+
+## Week 1
+### HCI (Human Computer Interaction)
+Design/implementation of computer systems that people can interact with
+
+### Interaction Design
+Designing interactive products for people
+
+### User Experience
+People's experience when using a product, how people feel about it (e.g. happy)
+
+### Conceptual Model
+- A representation of the proposed system that describes what it should do, how it should behave, how it should look and how it will be understood by users
+- Describes what people will experience when using a system
+- Involves three considerations
+    - Interaction Paradigm
+    - Interaction Mode/Type
+    - Interface Metaphor
+
+### Interaction Paradigm
+ICT framework within which interaction takes place (e.g. personal computing, networked computing, mobile computing, collaborative, augmented/virtual reality)
+
+### Interaction Mode/Type
+- Giving instructions
+- Conversing
+- Manipulating and navigating
+- Exploring and browsing
+
+### Interface Metaphor
+- Interface metaphors involve designing in a way that takes advantage of knowledge that users already have from previous experiences in the real world
+- Interface metaphors gives users clues about how they can interact with an interface
+
+### Usability Goals
+Usability goals address whether or not a system is effective, efficient and satisfying:
+
+- Effective to use
+- Have good utility (be useful)
+- Efficient to use
+- Easy to learn
+- Easy to remember how to use
+- Safe to use
+
+### Usability Principles
+See [@sec:UsePrinc]
