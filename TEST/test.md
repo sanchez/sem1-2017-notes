@@ -7,6 +7,10 @@ course: Testing out pandoc
 title: Test Document
 toc: toc
 headrule: 0.12em
+figPrefix: "Figure "
+eqnPrefix: "Equation "
+tblPrefix: "Table "
+secPrefix: "Section "
 ---
 
 #Test
