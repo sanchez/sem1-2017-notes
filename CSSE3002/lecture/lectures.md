@@ -568,7 +568,16 @@ e.g. marketing experts, regulators, managers, business owners, developers
 A business model describes the rationale of how an organisation creates, delivers, and captures value
 
 ## Canvas
-<!-- TODO: Put in the canvas image -->
+The canvas can be broken down into these key areas:
+- Key Partners
+- Key Activities
+- Key Resources
+- Value Provided
+- Customer Relationships
+- Channels
+- Customers
+- Revenue
+- Costs
 
 ### Customers
 - Personas
