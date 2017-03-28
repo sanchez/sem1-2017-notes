@@ -4,9 +4,13 @@ lastname: Fitz
 number: 43961229
 code: CSSE3002
 course: The Software Process
-title: Lecture 1
+title: Lecture Notes
 toc: toc
 headrule: 0.12em
+figPrefix: "Figure "
+eqnPrefix: "Equation "
+tblPrefix: "Table "
+secPrefix: "Section "
 ---
 
 # Software Engineering
@@ -449,6 +453,17 @@ digraph {
 - The achievement of goals with minimum resources
     - less rework, fewer omissions and misunderstandings
 
+## Product vs User Centred
+### Product-Centred
+- Focus on features to be delivered
+    - expect users will use features to complete tasks
+
+### User-Centred
+- Focus on anticipated usage
+    - what do users need to accomplish
+- Reveal necessary functionality
+- Assists with prioritisation
+
 # Advice / Perspective
 - ... a systematic approach to finding, documenting, organizing, and tracking the changing requirements of a system [RUP]
 - In practice it is impossible to produce a complete and consistent requirements document [Somerville]
@@ -632,3 +647,615 @@ The canvas can be broken down into these key areas:
 - Opportunity
 - Development Estimates
 - Quantity of Customers
+
+# Requirements Elicitation
+## Elicitation Process
+\dot(EProcess)(Elicitation Process)
+~~~
+digraph {
+    "Preparation" -> "Elicitation" -> "Analysis" -> "Specification" -> "Preparation";
+}
+~~~
+
+## Preparation -- Sources of Requirements
+- Stakeholders
+- Users
+    - Identify classes of users
+    - How will they use the system?
+- Environment
+    - Application domain
+    - Organisation
+    - Operations
+
+### Know Your Users -- User Role Modelling
+- What types of people will use the system?
+    - each will have different goals
+- Don't think of an anomymous user
+    - over simplification
+- Identify different user roles
+    - brainstorm initial set
+    - group related roles
+    - consolidate roles
+    - refine roles
+- Don't get stuck on organisational roles
+
+### Personas
+- Fictitious character representing a user role
+- Makes important roles more realistic
+    - mock person, including photo and profile
+
+### Application Domain
+- Knowledge of area in which system is used
+- Sources
+    - manual
+    - books
+    - journals
+    - users
+
+### Organisation
+- Structure
+    - most IT systems reflect organisation structure
+- How fixed is the structure
+    - is the system meant to change it?
+- Policies and practices
+
+### Operations
+- Other system dependencies
+    - interface requirements
+    - timing constraints
+- Execution environment
+    - platform
+    - reliability and performance
+- Criticality
+    - mission
+    - safety
+
+## Elicitation Challenges
+- Stakeholders and users may not be able to describe their tasks well
+    - make assumptions and leave things unstated
+- No-one knows everything
+- Requirements conflict
+- Implicit requirements
+
+## Elicitation Techniques
+- Interviews
+- Workshops
+- Focus Groups
+- Observations
+- Questionnaires
+
+### Interviews
+- Effective for understanding problem and eliciting *general* requirements
+- Prepare questions in advance
+    - discussion needs a starting point
+    - primarily open-ended questions
+    - strawman model if you have some data
+- Suggest ideas and alternatives
+    - users may not realise what is possible
+- Active listening
+    - paraphrase what you understand
+- Clarify what's unclear
+    - draw me a diagram
+    - card sorting
+- Maintain focus
+
+### Workshop
+- Structured meeting
+    - formal roles
+    - clear goals
+- Multiple stakeholders
+    - resolve conflicting requirements
+    - quickly gather broad system usage
+
+### Focus Groups
+- Less structure
+    - still need clear goals
+- Exploratory discussion
+    - needs
+    - preferences
+    - expectations
+- Broad stakeholder representation
+- Gather broad-based ideas
+
+### Observations
+- Observe how users perform their tasks
+    - learn workflow
+- Users often cannot describe everything they do
+    - too many fine details
+    - habitual tasks
+- Time consuming
+    - silent observation
+    - interactive
+
+### Questionnaires
+- Inexpensive and easily administered to remote sites
+- Collect data from many users
+- May feed into interviews or workshops
+- Good questionnaires difficult to write
+
+#### Good Questionaires
+- Answer options for all possibilities
+- Answer choices mutually exclusive
+- Avoid phrasing that implies a correct answer
+- Closed questions for statistical analysis
+- Open questions to gather ideas
+- Keep short
+
+## Independent Elicitation Techniques
+- Discover information on your own
+- System interface analysis
+- User interface analysis
+- Document analysis
+
+### System Interface Analysis
+- Look at other system's functionality
+    - what does your system need to do?
+    - what can you use?
+- Data exchange
+    - including formats and validation
+- Services
+
+### User Interface Analysis
+- Study existing systems
+    - what do they do?
+    - how are they used?
+- What should be replicated and avoided?
+- Good way to learn existing system and processes
+
+### Document Analysis
+- Business process descriptions
+- Existing system documentation
+    - user manuals
+    - specifications
+    - what must be kept
+    - what can be improved
+- Industry standards or legislation
+- Gain understanding of domain or system
+
+## Soft Skills
+- Active Listening
+- Interviewing and Questioning
+- Facilitation
+- Negotiation
+- Observation
+- Writing
+- Organisation
+- Interpersonal
+- Creativity
+
+# Use Case Modelling
+- Models and documents the functional requirements of a problem domain
+- Results in the producation of the
+    - functional requirements
+    - which are the detailed, role based, functional account of the requirements
+
+## Background
+- Use cases were first described by Ivar Jacobson. *Object-Oriented Software Engineering: A Use Case-Driven Approach. Addison Wesley, 1992
+- Subsequently incorporated into numerous other methods
+- Basic technique for capturing user requirements
+
+## Why Use Cases?
+- Formalises users' expectations of what the system is to do and how the system is to be used
+- Easy technique to understand
+    - documents actual paths through the system
+- User-driven process
+    - encourages user involvement
+- Basis for scoping and prioritisng development work
+- Basis for acceptance testing
+- Well aligned with Business Process Modelling
+
+## Actors, Use Cases and Association
+Actors: things outside of the system that interact with the system (*stick figures*)
+Use Cases: features of the system that an actor uses (*circle things*)
+Associations: indicates a relationship between an actor and a use case (*a line*)
+
+### Actors
+- Everything that interacts with the system
+    - people as well as other systems
+    - important in defining the boundary of the system
+- Not described in detail (they're outside the system)
+    - though their interface is usually defined
+- Normally act in several use cases
+- Represents a role that a user can play
+    - many users are represented by a single actor
+    - one user can be different actors at different times
+        - performs different use cases depending on role
+
+#### Actors and Users
+- A user plays the role of an actor
+    - an example of an actor is a ''clerk``
+    - an example of a user is ''John Smith`` -- an actual clerk
+- A particular user may play the roles of many different actors
+- **Actors are External to System**
+    - Make sure that actors are people or other systems that would actually use the system (*Not things that would be modelled within the system)
+    - The system does not use itself
+    - The use cases describe what the system does
+- **Actors are Not Technical Choices**
+    - A DBMS is a particular storage stategy
+        - it is a design decision
+        - it should not appear in the requirements
+- **Actors Interact with the System**
+    - Actors interact with the system
+        - use it to perform a task
+        - provide a service used by the system
+- **Primary and Secondary Actors**
+    - Primary actors are those actors that the system is designed to serve
+        - main users of the system
+        - represent the users for whom the system is designed
+        - focus for modelling the system
+    - Secondary actors are support roles
+        - secondary actors only exist so that primary actors can use the system
+            - administration
+            - services
+
+## What is a Use Case?
+- A way to use the system
+    - *''A sequence of transactions offered by the system that yield a useful result for an actor`` \[Jacobson et al, 1992\]
+- Externally required functionality
+- What a system does, not how it does it
+- Specify the behaviour of a use case as a flow of events
+    - textually
+    - graphically
+
+### Task 1: Identify Actors
+- Identifying actors is the starting point
+    - ''Who is this system supposed to help?``
+- Finding human actors is relatively straight forward
+- Other systems are sometimes less obvious
+- Don't assume that current users will be actors
+    - think about potiential users
+    - i.e. how can the current system be improved
+- May wish to record current system actors to help think about potential actors
+
+#### Actor Description Template
+\begin{center}
+\begin{tabular}{|l|p{10cm}|}
+\hline
+\textbf{Actor Name} & Actor Name\\\hline
+\textbf{Description} & A description of the role this actor plays\\\hline
+\textbf{Aliases} & Other names that may be used in the problem domain to describe this actor\\\hline
+\textbf{Inherits} & The name of any other actor from which behaviour is inherited\\\hline
+\textbf{Protocol} & Only included if this actor represents an external device or system. Receives: Messages that this actor receives from the system. Sends: Messages that this actor sends to the system.\\\hline
+\end{tabular}
+\end{center}
+
+#### External Systems as Actors
+- If an entity interacts with a domain, then it is considered to be an actor
+- An actor that is another system or device is considered to be an External System Actor
+
+### Task 2: Identify Initial Use Cases
+- For each actor note tha activities/tasks they do as part of their role
+    - each activity/task should be listed as a verb phrase
+- Examine the tasks, or potential tasks, of each actor in turn
+    - an initial use case can be identified from each activity/task
+- To identify use cases read the specifications from each actor's perspective
+- Interview business users as to what they wish the system to do and how they wish to interact with the new system
+- Where an activity is common to a group of actors, it's possible to identify an abstract actor to deal with the interaction.
+
+#### Sources of Use Cases
+- Possible sources for use cases
+    - functional requirements specification
+    - domain material
+    - interviews with users
+    - personal experience
+    - workshops with users
+- Identify the logical functioning of the business process and do not include technical details
+    - State "what" is required and "why"
+    - Not "how"
+
+#### Tips for Identifying Use Cases
+- The following questions are useful starting points:
+    - What are the main tasks of each actor?
+    - Will the actor have to read/write/change any of the system information?
+    - Will the actor have to inform the system about outside changes?
+    - Does the actor wish to be informed about unexpected changes?
+
+### Task 3: Draw Use Case Diagram
+- Once the actors and their use cases have been identified a use case diagram can be drawn
+- A use case diagram represents the actors, the boundary of the system and the use cases of the system
+- Most useful for presentation and communication purposes
+- A Use Case Diagram provides a high-level overview of the system requirements
+
+\dot(ExampleUse)(Example of a User Case)
+~~~
+graph {
+
+    graph [layout = dot, rankdir = LR]
+
+    subgraph cluster_0 {
+        "Connect to ATM";
+        "Withdraw Funds";
+        "Deposit Funds";
+        "Transfer Funds";
+        color=black;
+    }
+    a [shape=plaintext,label=<<table border="0"><tr><td><img src="CSSE3002/lecture/Stickman.jpg"/></td></tr><tr><td>Customer</td></tr></table>>];
+    a -- {"Connect to ATM", "Withdraw Funds", "Deposit Funds", "Transfer Funds"};
+}
+~~~
+
+##### Mis-Use Cases
+- Associations in use case diagrams connect actors to use cases (they never relate actors to actors or use cases to other use cases)
+- Most importantly, they're not designed to show a functional decomposition of the system
+    - [@fig:NotValidUse] is an example of not a valid use case
+
+\dot(NotValidUseCase)(Not a Valid Use Case\label{fig:NotValidUse})
+~~~
+graph {
+    rankdir=LR;
+    a [shape=plaintext,label=<<table border="0"><tr><td><img src="CSSE3002/lecture/Stickman.jpg"/></td></tr><tr><td>coffee drinker</td></tr></table>>];
+    a -- "make coffee" -- {"boil water", "add coffee", "pour coffee"};
+}
+~~~
+
+**Use Cases are Not a Flowchart**
+
+### Task 4: Identify Packages
+It is useful to group use cases into packages that represent subject areas
+    - A logical aspect of the problem space where a group of use cases work towards a common goal.
+
+#### Packages -- UML Notation
+- See [@fig:UMLNotation]
+
+\dot(UMLNotation)(Packages -- UML Notation\label{fig:UMLNotation})
+~~~
+graph {
+    rankdir=LR;
+    layout=dot;
+    ranksep=1;
+
+    a [shape=plaintext,label=<<table border="0"><tr><td><img src="CSSE3002/lecture/Stickman.jpg"/></td></tr><tr><td>Customer</td></tr></table>>];
+    b [shape=plaintext,label=<<table border="0"><tr><td><img src="CSSE3002/lecture/Stickman.jpg"/></td></tr><tr><td>Bank Staff</td></tr></table>>,pos="10,10!"];
+
+    subgraph cluster_0 {
+        label = "Automated Teller Machine";
+        color=black;
+
+        subgraph cluster_1 {
+            label="Customer Interaction"
+            color=black;
+
+            "Connect to ATM";
+            "Withdraw Funds";
+            "Deposit Funds";
+            "Transfer Funds";
+        }
+
+        subgraph cluster_2 {
+            label="ATM Maintence";
+            color=black;
+
+            "Open ATM";
+            "Close ATM";
+            "Process End Of Day";
+        }
+    }
+
+    a -- {"Connect to ATM", "Withdraw Funds", "Deposit Funds", "Transfer Funds"};
+    b -- {"Open ATM", "Close ATM", "Process End Of Day"};
+}
+~~~
+
+### Task 5: Develop Initial Use Cases
+- Develop in workshop/JAD sessions in conjuncation with client representatives
+    - Requirements Modeller acts as a facilitator
+    - Prototype Developer may be observer
+- Initially keep use cases simple and at a logical level only, describe what needs to be done in the use case
+    - Use Cases may vary considerably at this stage as ideas are brainstormed -- detailed use cases will be hard to change at this stage
+
+#### Priorities the Use Cases
+- The complete listing of use cases should be prioritised based on organisational needs
+- This allows important functions to be delivered first and the system roll-out to be business requirements driven
+
+#### Identify Typical and Alternative Scenarios
+- A use case may be composed of typical and alternative scenarios
+    - Typical scenarios -- normal sequence of events
+        - represent the course taken in 80% of cases
+    - Alternative scenarios -- abnormal courses of operation
+        - represent errors, or conditions not often encountered
+- Try to understand the typical scenario first
+    - just list the alteratives
+
+#### Documenting Use Cases Guidelines
+- Initially just specify the events of the use case as a series of steps
+- During refinement ensure that a statement of "why" a step is being executed is included
+    - It is easy for a domain expert to forget to document why, because this seems obvious
+    - Try to remember that the model will be read by people unfamiliar with the domain
+- Number the steps
+- If steps are completed within the context of another step, indent the text and the numbers
+    1) The First Step
+        2) This step must be completed to accomplish step 1
+        3) This is the next step to accomplish step 1
+    4) The Second Step
+- When the typical scenario is being documented, identify any alternative scenarios
+    - they do not have to be fully documented until the final release point
+- Document the steps of a use case sequentially
+    - a step the actor performs
+    - followed by a step the system does in response
+    - next step the actor performs
+
+#### Description Detail
+- Provide enough detail so the Business Owner can verify it performs the actions they require
+- Functionality of the system needs to be described in enough detail to allow object decomposition
+
+#### Use Cases and the User Interface
+- Keep use cases general
+    - use cases should describe what the actor logically wants to achieve (not the means by which they achieve those goals)
+- UI/UX design is a seperate activity
+    - after use cases have been validated
+
+### Task 6: Refine the Typical and Alternative Scenarios
+- Once the typical and alternative scenarios have been identified and agreed they need to be refined
+- Prototyping may be used during the refinement process to model the interaction with the system
+- Refining use cases involves adding detail
+    - May be done through workshops or prototyping (depending upon the complexity of the use case)
+- Requires attention to detail
+    - good understanding of problem domain and system goal
+- Use cases can be developed in parallel
+    - different primary actors by different teams
+- Use cases can be added to each other to create more complex use cases
+
+### Task 7: Restructure Use Cases
+- Restructure the use cases to maximise reuse and minimise redundancy
+- Use cases can be restructured in three ways
+    - \<\<include\>\> relationship
+    - \<\<extend\>\> relationship
+    - generalisation
+- Functional decomposition
+    - identify repeatedly used or specialised portions and factoring them out
+
+#### \<\<include\>\> Relationship
+- Factor out common behaviour in use cases
+    - sequence of steps appearing in multiple use cases
+- Scenario always uses the included steps
+    - included steps do not have to be complete use case (i.e. initiated by an actor)
+
+#### Illustrating the \<\<include\>\> Relationship
+- In the original use case the phrase \<\<include\>\> \<*use case name*\> is inserted where the included use case begins (steps are removed from the original use case)
+- \<\<include\>\> relationship can be shown in the use case diagram
+    - Use case 1 \<\<include\>\> Use case 2
+    - See [@fig:IncludeExample]
+
+\dot(IncludeExample)(Include UML Notation\label{fig:IncludeExample})
+~~~
+digraph {
+    "Use Case 1" -> "Use Case 2" [label="<<include>>",style="dashed"];
+}
+~~~
+
+#### \<\<include\>\> Relationship in the Scenario Text
+\begin{center}
+\begin{tabular}{|lp{7cm}|}
+\hline
+Use Case Title: & Reply to a message\\
+Ref.Number: & ES002\\
+Summary: & Allows the user to reply to a message\\
+Primary Actor: & Mail User\\
+Inherits: & None\\
+Includes: & Compose a Message\\
+Extension Points: & None\\
+Preconditions: & A message is selected\\
+Typical Sequence of Events: & \begin{enumerate}
+\item Read Message
+\item Create a reply -- <<include>> Compose a Message
+\item Send the reply
+\end{enumerate}\\\hline
+\end{tabular}
+\end{center}
+
+#### \<\<extend\>\> Relationship
+- Factors out optional behaviour in use cases
+    - used when a scenario produces a different result in certain situations
+        - when there are optional or uncommon steps that may occur
+- The extended scenario may be completed without including the steps from the extending use case
+    - removes the need to have many primary scenarios to capture the optional paths of a use case
+- Delivery of extending use cases can occur in later phases of development
+
+#### Extension Point
+- Included in the use case description to indicate the point at which the extending use case begins
+    - condition that causes the extension is highlighted
+- Scenario for the base use case runs as normal until the extension point
+- Under certain conditions the extending use case then begins and runs to completion
+- Base use case then resumes
+
+#### Illustrating the \<\<extend\>\> Relationship
+- Shown in two different ways
+    - See [@fig:ExtendExample1;@fig:ExtendExample2]
+
+\dot(ExtendExample1)(Extend UML Notation 1\label{fig:ExtendExample1})
+~~~
+digraph {
+    "Use Case 1" -> "Use Case 2" [label="<<extend>>", style="dashed"];
+}
+~~~
+
+\dot(ExtendExample2)(Extend UML Notation 2\label{fig:ExtendExample2})
+~~~
+digraph {
+    node [shape="record"];
+    proc1 [label="{<f0>Use Case 1|<f1>extension points\n extension point name 1\n extension point name 2\n}", shape="Mrecord"];
+    "Use Case 2" -> proc1 [label="<<extend>>\n(extension point)", style="dashed"];
+}
+~~~
+
+#### Use Case Generalisation
+- General behaviour can be factored out using generalisation
+    - like inheritance in class design
+- Use when the behaviour of the child use case is more specific than that described by the parent use case
+    - general -- specialized relationship
+
+#### Illustrating Use Case Generalisation
+- In the original use case the phrase inherits: \<parent use case\> is included in the text
+- Scenario description of the child indicates the behaviour of the parent that is replaced or refined
+    - refine \<step number in parent use case\>
+    - replace \<step number in parent use case\>
+- Generalisation relationship can be shown in the use case diagram
+    - See [@fig:GeneralisationExample] (Use Case 2 inherits Use Case 1)
+
+\dot(GeneralisationExample)(Generalisation UML Notation\label{fig:GeneralisationExample})
+~~~
+digraph {
+    rankdir=BT;
+    "Use case 2" -> "Use Case 1" [arrowhead="onormal"];
+}
+~~~
+
+## Naming Guidelines
+### Actors
+- Use a noun for an actor name
+- Begin each word in the name with a capital letter
+
+### Use Cases
+- Use a verb phrase. Not a noun phrase. Use cases describe an activity
+- Name from the primary actor's perspective
+
+## General (Abstract) Actors
+- Actors that share use cases could be abstracted such that a new general actor is created (don't go overboard)
+- Ensure the general and specialised actors both represent useful concepts or users
+*See [@fig:AbstractActors]*
+
+\dot(AbstractActors)(Abstract Actors Example\label{fig:AbstractActors})
+~~~
+digraph {
+    rankdir=LR;
+    a [shape=plaintext,label=<<table border="0"><tr><td><img src="CSSE3002/lecture/Stickman.jpg"/></td></tr><tr><td>HR Staff</td></tr></table>>];
+    b [shape=plaintext,label=<<table border="0"><tr><td><img src="CSSE3002/lecture/Stickman.jpg"/></td></tr><tr><td>Employee</td></tr></table>>];
+
+    a -> "Update Pay" [arrowhead="none"];
+    a -> b [arrowhead="onormal"];
+    b -> "View Pay" [arrowhead="none"];
+}
+~~~
+
+## Use Cases Limitations
+- Based on usage scenario
+- Not suitable for
+    - batch processing
+    - computationally intensive (e.g. business analytics)
+    - embedded systems
+
+### Use Cases vs User Stories
+- Both are user-centred
+    - what is to be accomplished
+- User Stories
+    - statement of user needs
+        - details to be discovered during development (fleshed out by acceptance tests)
+- Use Cases
+    - description of interaction with system
+        - allows analysis
+        - verification
+
+## Activity Diagram
+- Shows the steps involved in performing a task
+    - can be considered an algorithm
+- Special form of state diagram
+    - all states are action states
+    - all transitions are triggered by completion of actions
+- Describes a complex task for objects of a class, operations, or use cases.
+    - focuses on internal processing
+    - use where all the events represent the completion of internally generated actions (procedural flow of control)
+    - use state diagrams where asynchronous events occur
+
+*See [@fig:ActivityDia]*
+
+![Activity Diagram](CSSE3002/lecture/ActivityDiagram.png){width=100% #fig:ActivityDia}
