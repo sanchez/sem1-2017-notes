@@ -58,3 +58,12 @@ Term 3
 +---------------+---------------+--------------------+
 
 Table: Some Text Can Be Entered Here
+
+Some text here
+
+\uml(testUML)(Testing UML)
+~~~
+@startuml
+Bob -> Steve : Hello
+@enduml
+~~~
