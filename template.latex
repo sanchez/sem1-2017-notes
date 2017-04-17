@@ -12,6 +12,9 @@
 \usepackage{longtable}
 \usepackage{booktabs}
 
+\usepackage{float}
+\floatplacement{figure}{H}
+
 \usepackage{xcolor}
 \definecolor{white}{HTML}{FFFFFF}
 \definecolor{black}{HTML}{000000}
