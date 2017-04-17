@@ -1259,3 +1259,106 @@ digraph {
 *See [@fig:ActivityDia]*
 
 ![Activity Diagram](CSSE3002/lecture/ActivityDiagram.png){width=100% #fig:ActivityDia}
+
+# Requirements Modelling
+- Product-Centered
+    - Focus on features to be delivered
+        - expect users will use features to complete tasks
+- User-Centred
+    - Focus on anticipated usage
+        - what do users need to accomplish
+    - Reveal necessary functionality
+    - Asists with prioritisation
+
+# Activity Diagram
+- Models dynamic behaviour
+    - process workflows
+    - use case scenarios
+    - operations
+- Steps involved in performing a task
+    - like an algorithm
+
+## Activity Diagram and Use Cases
+- Model flow of control in scenarios
+    - all scenarios can be shown on one diagram, if required
+- Flow-chart like representation of a use case
+    - can be useful for workshop reviews of scenarios
+
+## Activity Diagram and BPM
+- Model activities carried out by actors in business domain
+- Can establish the business context
+    - before use cases are extracted from the processes
+- Illustrates interactions between actors in a process
+    - using partitions (swimlanes)
+
+## Activities
+### Simple Action
+![Simple Action](CSSE3002/lecture/ADSimpleAction.png){#fig:ADSimpleAction}
+
+Lowest level of detail shown in diagram. See [@fig:ADSimpleAction]
+
+### Invoke Activity
+![Invoke Activity](CSSE3002/lecture/ADProcessOrder.png){#fig:ADInvodeActivity}
+
+Includes a number of steps shown in another diagram. See [@fig:ADInvokeActivity]
+
+### Time Event
+![Time Event](CSSE3002/lecture/ADTimeEvent.png){#fig:ADTimeEvent}
+
+Triggered by some time related condition (e.g. date, time, period). See [@fig:ADTimeEvent]
+
+## Nodes
+### Initial Node
+![Initial Node](CSSE3002/lecture/ADInitialNode.png){#fig:ADInitialNode}
+
+One per diagram. See [@fig:ADInitialNode]
+
+### Final Node
+![Final Node](CSSE3002/lecture/ADFinalNode.png){#fig:ADFinalNode}
+
+Optional and more than one allowed (all flows stop when reached). See [@fig:ADFinalNode]
+
+### Flow Final Node
+![Flow Final Node](CSSE3002/lecture/ADFlowFinal.png){#fig:ADFlowFinal}
+
+Flow stops, others continue. See [@fig:ADFlowFinal]
+
+### Decision Node
+![Decision Node](CSSE3002/lecture/ADDecisionNode.png){#fig:ADDecisionNode}
+
+One in, multiple out. See [@fig:ADDecisionNode]
+
+### Merge Node
+![Merge Node](CSSE3002/lecture/ADMergeNode.png){#fig:ADMergeNode}
+
+Multiple in, one out. See [@fig:ADMergeNode]
+
+## Parallel Flows
+Can have concurrent process flows
+
+### Fork Node
+![Fork Node](CSSE3002/lecture/ADForkNode.png){#fig:ADForkNode}
+
+Start concurrent flows. See [@fig:ADForkNode]
+
+### Join Node
+![Join Node](CSSE3002/lecture/ADJoinNode.png){#fig:ADJoinNode}
+
+Joins concurrent flows. See [@fig:ADJoinNode]
+
+## Example
+![Example Activity Diagram 1](CSSE3002/lecture/ADExample1.png){width=100% #fig:ADExample1}
+
+![Example Activity Diagram 2](CSSE3002/lecture/ADExample2.png){width=100% #fig:ADExample2}
+
+See [@fig:ADExample1;@fig:ADExample2]
+
+## Activity Diagrams in Use Case Modelling
+- Determine triggering event that starts use case flow
+- Identify actions and determine control flow
+- Add guard conditions and decision points
+- Add forking and joining to show parallel activity
+- Create invoke activities if complexity requires it
+- Group activities into partitions if needed
+- Add flows corresponding to alternative scenarios
+- Each path should correspond to an individual scenario
