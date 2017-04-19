@@ -11,6 +11,7 @@
 \usepackage{amsmath}
 \usepackage{longtable}
 \usepackage{booktabs}
+\usepackage{listings}
 
 \usepackage{float}
 \floatplacement{figure}{H}
@@ -27,6 +28,21 @@
 \colorlet{primary}{blue}
 \newcommand{\primary}[0]{\color{primary}}
 \newcommand{\black}[0]{\color{black}}
+
+\lstdefinestyle{customc}{
+    belowcaptionskip=1\baselineskip,
+  breaklines=true,
+  frame=l,
+  xleftmargin=\parindent,
+  language=C,
+  showstringspaces=false,
+  keywordstyle=\bfseries\color{green!40!black},
+  commentstyle=\itshape\color{purple!40!black},
+  identifierstyle=\color{blue},
+  stringstyle=\color{orange},
+  numbers=left
+}
+\lstset{escapechar=@,style=customc}
 
 % set the title format
 \usepackage[explicit]{titlesec}
