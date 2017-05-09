@@ -67,3 +67,7 @@ Some text here
 Bob -> Steve : Hello
 @enduml
 ~~~
+
+| **1**                                                                        | **2**                        |
+| ---------------------------------------------------------------------------- | ---------------------------- |
+| Hello World. How are you all doing? My day has been great thanks for asking! | This is formatted using vim! |
