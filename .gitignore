@@ -1,3 +1,5 @@
 *.dat
 *.gv
 .tags*
+tags
+*.taghl
